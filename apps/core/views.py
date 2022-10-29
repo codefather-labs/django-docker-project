@@ -26,7 +26,7 @@ def main(request: ASGIRequest):
     return render(
         request,
         'site/main.html',
-        create_context('main')
+        create_context('main', data={'room_name': 'main'})
     )
 
 

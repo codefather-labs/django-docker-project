@@ -53,6 +53,17 @@ DATABASES = {
     },
 }
 
+# Channels Settings
+# ------------------------------------------------------------------------------
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('redis', 6379)],
+        },
+    },
+}
+
 # Static Settings
 # ------------------------------------------------------------------------------
 if WHITENOISE_PACKAGE_REQUIRE:

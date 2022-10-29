@@ -1,3 +1,5 @@
+channels==4.0.0
+channels-redis==4.0.0
 Cython==0.29.28
 Django==4.0.5
 django-cors-headers==3.12.0
@@ -8,6 +10,7 @@ git+https://github.com/codefather-labs/django-subdomains.git
 git+https://github.com/codefather-labs/datamodels.git
 drf-yasg==1.20.0
 psycopg2==2.9.3
-uvicorn==0.17.6
-uvloop==0.16.0
+redis==4.3.4
+uvicorn==0.19.0
+uvloop==0.17.0
 whitenoise==6.2.0

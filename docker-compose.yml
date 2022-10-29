@@ -28,6 +28,7 @@ services:
 
     depends_on:
       - postgres
+      - redis
 
   postgres:
     image: postgres:15
@@ -40,5 +41,16 @@ services:
     ports:
       - "54320:5432"
 
+  redis:
+    container_name: redis
+    image: redis:6.2.7-alpine
+    command: redis-server --maxmemory 256mb --maxmemory-policy allkeys-lru --appendonly yes
+    restart: always
+    ports:
+      - 6379:6379
+    volumes:
+      - redis:/data
+
 volumes:
   postgres_data: {}
+  redis: {}

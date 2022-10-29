@@ -24,7 +24,8 @@ def generate_api_response(
 
 def create_context(page_name: str, data=None):
     result = {
-        "page_name": page_name
+        "page_name": page_name,
+        "context": {}
     }
     if data:
         result['context'].update(**data)
