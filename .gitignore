@@ -1,7 +1,8 @@
 # Byte-compiled / optimized / DLL files
-__pycache__/
+*__pycache__*
 *.py[cod]
 *$py.class
+*.pyc
 
 # C extensions
 *.so
@@ -127,3 +128,24 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# IDEA
+.idea
+
+# staticfiles
+static/admin
+static/drf-yasg
+static/rest_framework
+
+post/*
+.DS_Store
+heroku_log.sh
+*.log
+*.log.*
+*.pid
+socks_config.json
+db.sqlite3
+scripts/drop_prod_db.sh
+scripts/drop.sql
+static/*
+media/*

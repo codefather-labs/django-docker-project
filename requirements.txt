@@ -1,0 +1,13 @@
+Cython==0.29.28
+Django==4.0.5
+django-cors-headers==3.12.0
+django-extensions==3.1.5
+djangorestframework==3.13.1
+django-robots==5.0
+git+https://github.com/codefather-labs/django-subdomains.git
+git+https://github.com/codefather-labs/datamodels.git
+drf-yasg==1.20.0
+psycopg2==2.9.3
+uvicorn==0.17.6
+uvloop==0.16.0
+whitenoise==6.2.0

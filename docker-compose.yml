@@ -1,0 +1,44 @@
+version: '3'
+
+
+services:
+  backend:
+    container_name: 'backend'
+
+    build:
+      context: .
+      dockerfile: docker/backend/Dockerfile
+
+    ports:
+      - 8000:8000
+
+    restart: always
+    command: python3 -m uvicorn settings.asgi:application --reload --host=0.0.0.0 --port=8000 --loop=uvloop
+
+    volumes:
+      - .:/app
+
+    environment:
+      ENVIRONMENT: 'Production'
+
+    env_file:
+      - .env-production
+
+    working_dir: /app/
+
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:15
+    container_name: "postgres"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./docker:/app/docker
+    env_file:
+      - .env-production
+    ports:
+      - "54320:5432"
+
+volumes:
+  postgres_data: {}
