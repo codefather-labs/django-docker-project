@@ -16,3 +16,7 @@
 ---
 - robots.txt
 - sitemap.xml
+---
+# Environment
+- Local
+- Production
