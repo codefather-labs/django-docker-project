@@ -13,3 +13,6 @@
 - uvicorn==0.17.6
 - uvloop==0.16.0
 - whitenoise==6.2.0
+---
+- robots.txt
+- sitemap.xml
